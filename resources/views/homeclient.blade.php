@@ -37,9 +37,6 @@
               <a class="navbar-brand" href="#">Gis Palembang</a>
             </div>
             <div class="collapse navbar-collapse" id="lauraMenu">
-              <ul class="nav navbar-nav navbar-right navbar-border">
-                <li class="active"><a href="{{ route('login')}}">Login</a></li>
-              </ul>
             </div>
           </div>
         </nav>

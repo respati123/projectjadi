@@ -114,7 +114,15 @@ trait AuthenticatesUsers
      */
     protected function authenticated(Request $request, $user)
     {
-        //
+        $previous_session = $user->session_id;
+
+          if ($previous_session) {
+              \Session::getHandler()->destroy($previous_session);
+          }
+
+          Auth::user()->session_id = \Session::getId();
+          Auth::user()->save();
+          return redirect()->intended($this->redirectPath());
     }
 
     /**
