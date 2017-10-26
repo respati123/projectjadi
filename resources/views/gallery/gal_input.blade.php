@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
     <div class="card-body">
         <div class="row">
             <div class="col">
@@ -50,7 +50,7 @@
                 @if (session()->has('success'))
                     <li class="alert alert-success">{{ session()->get('success') }}</li>
                 @endif
-                    <form action="{{ URL::to('sejarah/gallery/'.$parameter) }}" file="true" enctype="multipart/form-data" method="POST">
+                    <form action="{{ URL::to('admin/sejarah/gallery/'.$parameter) }}" file="true" enctype="multipart/form-data" method="POST">
                     {{ csrf_field() }}
                         <div class="form-group row">
                             <label for="Gallery" class="col-sm-2 col-form-label">Gallery</label>
@@ -85,32 +85,32 @@
                 @if(count($data) > 0)
 
                     @foreach($data as $d)
-                    
+
                         <div class="col-sm-3" id="hover">
                             <img class="img-thumbnail" src="{{ url('images/gallery/'.$d->gs_gambar)}}" alt="Card image cap">
                             <div class="middle">
                                 <div class="row">
                                     <div class="col-sm-3">
-                                    {{ Form::open(array('url' => 'sejarah/gallery/'.$d->gs_id, 'onsubmit'=>'return confirm("are you sure for delete this file?");'))  }}
+                                    {{ Form::open(array('url' => 'admin/sejarah/gallery/'.$d->gs_id, 'onsubmit'=>'return confirm("are you sure for delete this file?");'))  }}
 						                    {{ Form::hidden('_method', 'DELETE') }}
 						                    {{ Form::submit('Delete', array('class' => 'btn btn-warning')) }}
 						            {{ Form::close() }}
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
-                        
-                    
+
+
                     @endforeach
                     @else
 
                     <p>No Available</p>
 
                     @endif
-            </div> 
+            </div>
         </div>
-        
+
     </div>
 </div>
 

@@ -45,13 +45,13 @@
 		            		<td>
 		            			<div class="container">
 		            				<div class="row">
-		            					<a href="{{ URL::to('sejarah/' . $d->sj_id . '/edit') }}" class="btn btn-info">Edit</a> &nbsp &nbsp
-										{{ Form::open(array('url' => 'sejarah/' . $d->sj_id, 'onsubmit'=>'return confirm("are you sure for delete this file?");')) }}
+		            					<a href="{{ URL::to('admin/sejarah/' . $d->sj_id . '/edit') }}" class="btn btn-info">Edit</a> &nbsp &nbsp
+										{{ Form::open(array('url' => 'admin/sejarah/' . $d->sj_id, 'onsubmit'=>'return confirm("are you sure for delete this file?");')) }}
 						                    {{ Form::hidden('_method', 'DELETE') }}
 						                    {{ Form::submit('Delete', array('class' => 'btn btn-warning')) }}
 						                {{ Form::close() }}
 														&nbsp &nbsp
-													<a href="{{ URL::to('sejarah/gallery/'.$d->sj_id) }}" class="btn btn-info">Gallery <span class="badge badge-pill badge-danger">{{ $d->count}}</span></a>
+													<a href="{{ URL::to('admin/sejarah/gallery/'.$d->sj_id) }}" class="btn btn-info">Gallery <span class="badge badge-pill badge-danger">{{ $d->count}}</span></a>
 		            				</div>
 		            			</div>
 

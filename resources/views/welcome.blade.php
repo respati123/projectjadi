@@ -11,11 +11,11 @@
     <meta name="author" content="">
     <title>GIS Palembang Admin</title>
 
-     
+
     <link href="/css/all.css" rel="stylesheet">
     <link href="/css/toastr.css" rel="stylesheet">
     <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-      
+
   </head>
 
   <body class="fixed-nav sticky-footer bg-dark" id="page-top" onload="InitMap()">
@@ -64,7 +64,7 @@
       </div>
     </div>
 
-  
+
 
   </body>
     <script src="/vendor/jquery/jquery.min.js"></script>
@@ -78,13 +78,13 @@
     <script src="/vendor/chart.js/Chart.min.js"></script>
     <script src="/vendor/datatables/jquery.dataTables.js"></script>
     <script src="/vendor/datatables/dataTables.bootstrap4.js"></script>
-   
+
 
     <!-- Plugin JavaScript -->
-    
+
 
     <!-- Custom scripts for this template -->
-    
+
     <script src="/js/sb-admin.min.js"></script>
-    
+
 </html>

@@ -6,7 +6,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-          <li class="nav-item {{ Request::segment(1) == null ? "active" : " " }}" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <li class="nav-item {{ Request::segment(1) == 'admin' ? "active" : " " }}" data-toggle="tooltip" data-placement="right" title="Dashboard">
             <a class="nav-link" href="{{ route('home')}}">
               <i class="fa fa-fw fa-dashboard"></i>
               <span class="nav-link-text">
@@ -16,13 +16,13 @@
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
               <i class="fa fa-fw fa-wrench"></i>
-              <span class="nav-link-text" style="{{ Request::segment(1) == "kategori"||Request::segment(1) == "sejarah" ? "color:#dc3545;" : " " }}">Contents of the data</span>
+              <span class="nav-link-text" style="{{ Request::segment(2) == "kategori"||Request::segment(2) == "sejarah" ? "color:#dc3545;" : " " }}">Contents of the data</span>
             </a>
-            <ul class="sidenav-second-level collapse {{ Request::segment(1) == "kategori" || Request::segment(1) == "sejarah" ? "show" : " " }}" id="collapseComponents">
-              <li class="{{ Request::segment(1) == "kategori" ? "active" : " " }}">
+            <ul class="sidenav-second-level collapse {{ Request::segment(2) == "kategori" || Request::segment(2) == "sejarah" ? "show" : " " }}" id="collapseComponents">
+              <li class="{{ Request::segment(2) == "kategori" ? "active" : " " }}">
                 <a href="{{ route('kategori.index') }}">Category History</a>
               </li>
-              <li class="{{ Request::segment(1) == "sejarah" ? "active" : " " }}">
+              <li class="{{ Request::segment(2) == "sejarah" ? "active" : " " }}">
                 <a href="{{ route('sejarah.index') }}">Historical Data</a>
               </li>
             </ul>

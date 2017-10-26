@@ -44,8 +44,8 @@
 		            		<td>
 		            			<div class="container">
 		            				<div class="row">
-			            				<a href="{{ URL::to('kategori/' . $d->ks_id . '/edit') }}" class="btn btn-info">Edit</a> &nbsp &nbsp
-										{{ Form::open(array('url' => 'kategori/' . $d->ks_id, 'onsubmit'=>'return confirm("are you sure for delete this file?");')) }}
+			            				<a href="{{ URL::to('admin/kategori/' . $d->ks_id . '/edit') }}" class="btn btn-info">Edit</a> &nbsp &nbsp
+										{{ Form::open(array('url' => 'admin/kategori/' . $d->ks_id, 'onsubmit'=>'return confirm("are you sure for delete this file?");')) }}
 						                    {{ Form::hidden('_method', 'DELETE') }}
 						                    {{ Form::submit('Delete', array('class' => 'btn btn-warning')) }}
 						                {{ Form::close() }}
